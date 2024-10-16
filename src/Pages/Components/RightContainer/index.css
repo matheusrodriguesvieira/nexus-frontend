@@ -1,0 +1,23 @@
+.right-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.content-container{
+    display: flex;
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+
+}
+
+.content-container > *{
+    font-family: 'Roboto', sans-serif;
+}
+
+
