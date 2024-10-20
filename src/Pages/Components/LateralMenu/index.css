@@ -1,0 +1,8 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1D242B;
+    width: 18%;
+    height: 100%;
+}

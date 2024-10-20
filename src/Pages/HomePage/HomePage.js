@@ -1,9 +1,19 @@
 import React from "react";
+
+import MainPagesContainer from "../Components/MainPagesContainer/MainPagesContainer";
+import LateralMenu from "../Components/LateralMenu/LateralMenu";
+
 import "../../reset.css";
 
 function HomePage() {
     return (
-        <h1>HomePage</h1>
+
+        <MainPagesContainer>
+            <LateralMenu />
+            <div className="content-container">
+                <h1>Início</h1>
+            // </div>
+        </MainPagesContainer>
     );
 }
 
