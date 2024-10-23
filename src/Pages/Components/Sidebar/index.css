@@ -1,0 +1,53 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1D242B;
+    width: 18%;
+    height: 100%;
+    /* justify-content: space-between; */
+}
+
+.btn-menu-container, .btn-leave-container{
+    /* background-color: aqua; */
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 75%;
+    height: auto;
+    /* gap: 10%; */
+}
+
+.btn-menu-container > div, .btn-leave-container > div{
+    display: flex;
+    /* height: 100%; */
+    width: 70%;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 5%;
+    padding: 0.5rem;
+    cursor: pointer;
+    /* background-color: rebeccapurple; */
+    transition: 0.3s;
+}
+
+.btn-menu-container > div > img, .btn-leave-container > div > img{
+    width: 1.1rem;
+    height: auto;
+    display: block;
+}
+
+.btn-menu-container > div > nav, .btn-leave-container > div > nav{
+    /* display: block; */
+    /* width: 100%; */
+    /* text-decoration: none; */
+    color: #fff;
+    /* background-color: blue; */
+}
+
+.btn-menu-container > div:hover, .btn-leave-container>div:hover{
+    transform: scale(1.05);
+    /* border: 1px solid #fff; */
+}
