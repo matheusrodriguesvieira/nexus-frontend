@@ -72,10 +72,10 @@ function Sidebar({ function: setActiveComponent }) {
                     <img src={PodiumIcon} alt="icone de podium" />
                     <nav onClick={() => { setActiveComponent('Ranking') }}>Ranking</nav>
                 </div> */}
-                <div>
+                {/* <div>
                     <img src={PerfiIcon} alt="icone de perfil" />
                     <nav onClick={() => { setActiveComponent('Profile') }}>Perfil</nav>
-                </div>
+                </div> */}
             </div>
             <div className="btn-leave-container">
                 <div onClick={() => { handleLogout() }}>
