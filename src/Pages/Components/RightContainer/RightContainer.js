@@ -4,7 +4,7 @@ import './index.css'
 function RightContainer({component: Component}) {
     return (
         <div className="right-container">
-            <div className="content-container">
+            <div className="welcome-container">
                 <Component />
             </div>
         </div>

@@ -7,7 +7,7 @@
     background: linear-gradient(135deg, rgba(71,71,71,1) 0%, rgba(46,48,49,1) 36%, rgba(36,37,38,1) 66%, rgba(31,33,33,1) 100%);
 }
 
-.card-container{
+.login-card-container{
     display: flex;
     width: 80%;
     height: 85%;

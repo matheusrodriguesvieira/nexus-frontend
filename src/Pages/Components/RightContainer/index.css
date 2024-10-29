@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.content-container{
+.welcome-container{
     display: flex;
     width: 90%;
     height: 80%;
@@ -16,7 +16,7 @@
 
 }
 
-.content-container > *{
+.welcome-container > *{
     font-family: 'Roboto', sans-serif;
 }
 

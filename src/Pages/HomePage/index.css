@@ -1,0 +1,14 @@
+.main-pages-container{
+    /* background-color: yellow; */
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-container{
+    /* background-color: yellow; */
+    width: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
