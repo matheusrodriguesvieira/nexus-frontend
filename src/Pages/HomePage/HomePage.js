@@ -35,6 +35,7 @@ function HomePage() {
                 if (dados.error) {
                     console.log('Erro na requisição!');
                     console.log(dados.message);
+                    alert(dados.message);
                     navigate('/Homepage');
                 } else {
                     console.log('Sucesso na requisição!');
@@ -43,6 +44,7 @@ function HomePage() {
                 }
             } catch (error) {
                 console.error('Erro na requisição:', error);
+                alert('Erro na requisição:', error);
                 navigate('/Homepage');
             }
 

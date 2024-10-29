@@ -35,6 +35,7 @@ function LoginForm() {
                 if (dados.error) {
                     console.log('Erro na requisição!');
                     console.log(dados.message);
+                    alert(dados.message);
                     setLoading(false);
                 } else {
                     console.log('Sucesso na requisição!');
@@ -45,6 +46,7 @@ function LoginForm() {
                 }
             } catch (error) {
                 console.error('Erro na requisição:', error);
+                alert('Erro na requisição:', error);
                 setLoading(false);
             }
 
