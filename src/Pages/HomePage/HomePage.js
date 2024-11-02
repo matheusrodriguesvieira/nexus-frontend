@@ -19,7 +19,7 @@ function HomePage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const URI = `http://localhost/nexus-backend/api/validate-token/usuarios?matricula=${userData.matricula}`;
+        const URI = `https://api-nexus-backend.vercel.app/validate-token/usuarios?matricula=${userData.matricula}`;
         const CONFIGURACAO = {
             method: "GET",
             headers: {

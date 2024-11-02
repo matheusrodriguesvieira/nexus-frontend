@@ -16,7 +16,7 @@ function LoginForm() {
         event.preventDefault();
         setLoading(true);
 
-        const URI = `http://localhost/nexus-backend/api/usuarios/login/`;
+        const URI = `https://api-nexus-backend.vercel.app/usuarios/login`;
         const CONFIGURACAO = {
             method: "POST",
             headers: {

@@ -29,7 +29,7 @@ function Sidebar({ function: setActiveComponent }) {
 
     function handleLogout() {
 
-        const URI = `http://localhost/nexus-backend/api/usuarios/logout/?matricula=${userData.matricula}`;
+        const URI = `https://api-nexus-backend.vercel.app/usuarios/logout?matricula=${userData.matricula}`;
         const CONFIGURACAO = {
             method: "POST",
             headers: {
