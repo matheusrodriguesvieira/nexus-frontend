@@ -36,7 +36,7 @@ function HomePage() {
                     console.log('Erro na requisição!');
                     console.log(dados.message);
                     alert(dados.message);
-                    navigate('/Homepage');
+                    navigate('/');
                 } else {
                     console.log('Sucesso na requisição!');
                     console.log(dados.message);
@@ -45,7 +45,7 @@ function HomePage() {
             } catch (error) {
                 console.error('Erro na requisição:', error);
                 alert('Erro na requisição:', error);
-                navigate('/Homepage');
+                navigate('/');
             }
 
         })();
