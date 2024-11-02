@@ -48,7 +48,7 @@ form label{
 }
 
 .button-group button{
-    padding: 8px;
+    padding: 8px 0;
     font-size: 0.9rem;
     /* background-color: #057AC7; */
     /* background-color: red; */
