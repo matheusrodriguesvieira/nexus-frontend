@@ -8,11 +8,45 @@
 }
 
 .image-container{
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 2rem; */
+    width: 80%;
+    height: 50%;
+    /* background-color: aqua; */
+    /* overflow: hidden; */
 }
 
 .image-container img{
     max-width: 100%;
+    object-fit: cover;
+}
+
+.logo-preta{
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+    .left-container{
+        width: 100%;
+        height: 30%;
+        background-color: #fff;
+        padding: 0;
+        border-bottom: 1px solid black;
+    }
+
+    .logo-preta{
+        display: block;
+    }
+
+    .logo-branca{
+        display: none;
+    }
+
+    .image-container img{
+        max-height: 100%;
+        object-fit: cover;
+    }
 }

@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     width: 25%;
     height: 100%;
     color: #fff;
-    border-radius: 2rem;
+    border-radius: 10%;
 }
 
 .card-container h1{
@@ -28,4 +28,18 @@
     align-items: center;
     height: 70%;
     /* background-color: red; */
+}
+
+@media screen and (max-width: 720px) {
+    .card-container{
+        height: 50%;
+    }
+
+    .card-container h1{
+        font-size: 1.5rem;
+    }
+
+    .card-container h4{
+        font-size: 0.8rem;
+    }
 }

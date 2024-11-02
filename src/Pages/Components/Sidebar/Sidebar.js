@@ -1,7 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HorizontalLogo from '../HorizontalLogo/HorizontalLogo';
-import MenuProfileContainer from "../MenuProfileContainer/MenuProfileContainer";
+// import MenuProfileContainer from "../MenuProfileContainer/MenuProfileContainer";
+
+import FavoIcon from '../../../assets/favo-negativo.svg';
+import Logo from '../../../assets/logo-horizontal-negativo.svg';
 
 import HomeIcon from '../../../assets/home-negative.png';
 import LeaveIcon from '../../../assets/sair-branco.png';
@@ -16,14 +18,6 @@ function Sidebar({ function: setActiveComponent }) {
 
     const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')));
     const TOKEN = JSON.parse(localStorage.getItem('authorization'))
-
-    // // const { nome } = JSON.parse(localStorage.getItem('userData'))
-    // // const {url_perfil} = JSON.parse(localStorage.getItem('userData'))
-    // // const url_perfil = 'https://drive.google.com/uc?export=view&id=1jTKfcZDWZ5t-hDbAp5YcZBA9J0gkFc1c';
-    // // const url_perfil = 'https://drive.google.com/file/d/1jTKfcZDWZ5t-hDbAp5YcZBA9J0gkFc1c/view?usp=sharing';
-    // const url_perfil = 'https://drive.google.com/file/d/1jTKfcZDWZ5t-hDbAp5YcZBA9J0gkFc1c/view?usp=sharing';
-    // // const url_perfil = 'drive.usercontent.google.com/download?id=1jTKfcZDWZ5t-hDbAp5YcZBA9J0gkFc1c&authuser=0';
-
 
     const navigate = useNavigate();
 
@@ -40,7 +34,7 @@ function Sidebar({ function: setActiveComponent }) {
 
         // http://localhost/nexus-backend/api/usuarios/logout/
 
-        (async function() {
+        (async function () {
             try {
                 const response = await fetch(URI, CONFIGURACAO)
                 const dados = await response.json();
@@ -59,10 +53,30 @@ function Sidebar({ function: setActiveComponent }) {
         })();
     };
 
+    function ativarmenu(element){
+        const menuLateral = element.target.parentNode;
+        menuLateral.classList.toggle('active');
+    }
+
     return (
         <div className="menu-container">
-            <HorizontalLogo />
-            <MenuProfileContainer url_profile={userData.url_perfil} user_name={userData.nome} />
+            <div className="mobile-menu" onClick={ativarmenu}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
+            <div className="horizontal-image-container">
+                <img src={Logo} alt='Logo horizontal' />
+                {/* <img src={FavoIcon} alt='Logo horizontal' /> */}
+            </div>
+
+            <div className="menu-profile-container">
+                <div className="profile-image-container">
+                    <img src={userData.url_perfil} alt='imagem de perfil no menu' />
+                </div>
+                <p>Bem vindo,</p>
+                <h4>{userData.nome}</h4>
+            </div>
             <div className="btn-menu-container">
                 <div>
                     <img src={HomeIcon} alt="icone de casa" />
