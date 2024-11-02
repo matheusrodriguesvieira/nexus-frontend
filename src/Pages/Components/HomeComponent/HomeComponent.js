@@ -40,7 +40,7 @@ function HomeComponent() {
             }, 0);
             const media = (soma / valores.length);
 
-            setMediaVerResolver(media);
+            setMediaVerResolver(parseFloat(media.toFixed(2)));
             setTotalAnual(soma);
         } 
         // else {
