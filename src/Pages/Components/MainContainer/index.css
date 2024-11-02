@@ -13,3 +13,9 @@
     height: 85%;
     background-color: #fff;
 }
+
+@media screen and (max-width: 720px){
+    .login-card-container{
+        flex-direction: column;
+    }
+}

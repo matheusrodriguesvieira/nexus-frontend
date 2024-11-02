@@ -3,7 +3,7 @@
     font-size: 2.5rem;
 }
 
-.welcome-container button{
+ .welcome-container button{
     padding: 10px;
     font-size: 1.1rem;
     background-color: #057AC7;
@@ -12,4 +12,18 @@
     border: none;
     width: 30%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 720px){
+    .welcome-container h1{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+
+    .welcome-container button{
+        padding: 10px;
+        font-size: 1.1rem;
+        width: 30%;
+
+    }
 }
