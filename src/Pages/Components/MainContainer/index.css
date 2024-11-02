@@ -9,7 +9,7 @@
 
 .login-card-container{
     display: flex;
-    width: 80%;
+    width: 85%;
     height: 85%;
     background-color: #fff;
 }
@@ -17,5 +17,6 @@
 @media screen and (max-width: 720px){
     .login-card-container{
         flex-direction: column;
+        height: 70%;
     }
 }
