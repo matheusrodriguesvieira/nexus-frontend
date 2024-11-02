@@ -19,6 +19,7 @@ function SignInForm() {
 
         if (senha1 !== senha2) {
             alert("Senhas não conferem!");
+            setLoading(false);
             return;
         }
 
