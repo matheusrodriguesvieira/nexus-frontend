@@ -145,7 +145,23 @@
         
     }
 
+    .menu-profile-container > h4{
+        font-size: 9px;
+    }
+
     .menu-container.active > *:nth-child(n+2){
         display: flex;
+    }
+
+    .menu-container.active .mobile-menu .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+      
+    .menu-container.active .mobile-menu .line2 {
+        opacity: 0;
+    }
+      
+    .menu-container.active .mobile-menu .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
     }
 }
