@@ -4,11 +4,12 @@ import LoadingComponent from "../LoadingComponent/LoadingComponent";
 
 import './index.css';
 
-function LoginForm() {
+function SignInForm() {
     const navigate = useNavigate();
 
     const [id, setId] = useState('');
-    const [senha, setSenha] = useState('');
+    const [senha1, setSenha1] = useState('');
+    const [senha2, setSenha2] = useState('');
     const [loading, setLoading] = useState(false);
 
 
@@ -16,7 +17,13 @@ function LoginForm() {
         event.preventDefault();
         setLoading(true);
 
-        const URI = `https://api-nexus-backend.vercel.app/usuarios/login`;
+        if (senha1 !== senha2) {
+            alert("Senhas não conferem!");
+            return;
+        }
+
+
+        const URI = `https://api-nexus-backend.vercel.app/usuarios/store/cadastrar`;
         const CONFIGURACAO = {
             method: "POST",
             headers: {
@@ -24,7 +31,7 @@ function LoginForm() {
             },
             body: JSON.stringify({
                 'matricula': id,
-                'senha': senha
+                'senha': senha1
             }),
         };
 
@@ -39,10 +46,8 @@ function LoginForm() {
                     setLoading(false);
                 } else {
                     console.log('Sucesso na requisição!');
-                    localStorage.setItem('userData', JSON.stringify(dados.data));
-                    localStorage.setItem('authorization', JSON.stringify(dados.token));
                     setLoading(false);
-                    navigate('/Homepage');
+                    navigate('/Login');
                 }
             } catch (error) {
                 console.error('Erro na requisição:', error);
@@ -53,8 +58,8 @@ function LoginForm() {
         })();
     }
 
-    const handleCadastrar = () => {
-        navigate('/Cadastro');
+    const handleLogin = () => {
+        navigate('/Login');
     }
 
     if (loading) {
@@ -63,21 +68,25 @@ function LoginForm() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
+            <h1>Sing In</h1>
             <div className="form-group">
                 <label htmlFor="Email">Id de usuário</label>
                 <input placeholder="Ex.: 123456" id="Email" value={id} onChange={event => setId(event.target.value)} />
             </div>
             <div className="form-group">
-                <label htmlFor="Password">Senha</label>
-                <input placeholder="password" id="Password" type="password" onChange={event => setSenha(event.target.value)} value={senha} />
+                <label htmlFor="Password1">Senha</label>
+                <input placeholder="password" id="Password1" type="password" onChange={event => setSenha1(event.target.value)} value={senha1} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="Password2">Repita a senha</label>
+                <input placeholder="password" id="Password2" type="password" onChange={event => setSenha2(event.target.value)} value={senha2} />
             </div>
             <div className="button-group">
-                <button type="submit">Entrar</button>
-                <button type='button' onClick={handleCadastrar}>Primeiro acesso</button>
+                <button type="submit">Cadastrar</button>
+                <button type='button' onClick={handleLogin}>Fazer LogIn</button>
             </div>
         </form>
     );
 }
 
-export default LoginForm;
+export default SignInForm;

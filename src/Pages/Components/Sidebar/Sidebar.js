@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import MenuProfileContainer from "../MenuProfileContainer/MenuProfileContainer";
 
-import FavoIcon from '../../../assets/favo-negativo.svg';
+// import FavoIcon from '../../../assets/favo-negativo.svg';
 import Logo from '../../../assets/logo-horizontal-negativo.svg';
 
 import HomeIcon from '../../../assets/home-negative.png';
 import LeaveIcon from '../../../assets/sair-branco.png';
-import PerfiIcon from '../../../assets/perfil-negativo.png';
-import PodiumIcon from '../../../assets/podium-negativo.png';
+// import PerfiIcon from '../../../assets/perfil-negativo.png';
+// import PodiumIcon from '../../../assets/podium-negativo.png';
 // import fotoPerfil from '../../../assets/imagem2.png';
 
 import "../../../reset.css";
