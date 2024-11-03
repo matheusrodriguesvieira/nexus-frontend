@@ -14,17 +14,17 @@ function HomePage() {
 
     const navigate = useNavigate();
     const [activeComponent, setActiveComponent] = useState('home');
-    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')));
-    const TOKEN = JSON.parse(localStorage.getItem('authorization'))
+    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')) || {});
+    const TOKEN = JSON.parse(localStorage.getItem('authorization')) || "";
     const [loading, setLoading] = useState(true);
 
-
-    if (TOKEN === null) {
-        navigate('/');
-        return;
-    }
-
     useEffect(() => {
+
+        if (!userData || !TOKEN) {
+            navigate('/');
+            return;
+        }
+
         const URI = `https://api-nexus-backend.vercel.app/validate-token/usuarios?matricula=${userData.matricula}`;
         const CONFIGURACAO = {
             method: "GET",
