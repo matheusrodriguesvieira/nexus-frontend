@@ -14,13 +14,13 @@ function HomePage() {
 
     const navigate = useNavigate();
     const [activeComponent, setActiveComponent] = useState('home');
-    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')) || {});
-    const TOKEN = JSON.parse(localStorage.getItem('authorization')) || "";
+    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')) || null);
+    const TOKEN = JSON.parse(localStorage.getItem('authorization')) || null;
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
 
-        if (!userData || !TOKEN) {
+        if (userData === null || TOKEN === null) {
             navigate('/');
             return;
         }
