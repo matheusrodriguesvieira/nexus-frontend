@@ -18,6 +18,12 @@ function HomePage() {
     const TOKEN = JSON.parse(localStorage.getItem('authorization'))
     const [loading, setLoading] = useState(true);
 
+
+    if (TOKEN === null) {
+        navigate('/');
+        return;
+    }
+
     useEffect(() => {
         const URI = `https://api-nexus-backend.vercel.app/validate-token/usuarios?matricula=${userData.matricula}`;
         const CONFIGURACAO = {
