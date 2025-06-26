@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
+import leftArrowIcon from '../../../assets/left-arrow.svg';
 
 import './index.css';
+import { color } from "chart.js/helpers";
 
 function SignInForm() {
     const navigate = useNavigate();
@@ -71,7 +73,7 @@ function SignInForm() {
         <form onSubmit={handleSubmit}>
             <h1>Sing In</h1>
             <div className="form-group">
-                <label htmlFor="Email">Id de usuário</label>
+                <label htmlFor="Email">Matricula do usuário</label>
                 <input placeholder="Ex.: 123456" id="Email" value={id} onChange={event => setId(event.target.value)} />
             </div>
             <div className="form-group">
@@ -84,7 +86,9 @@ function SignInForm() {
             </div>
             <div className="button-group">
                 <button type="submit">Cadastrar</button>
-                <button type='button' onClick={handleLogin}>Fazer LogIn</button>
+                <button type='button' style={{backgroundColor:"#ecf0f1", color:'#000', border:'1px solid #000'}} onClick={handleLogin}>
+                    Voltar
+                </button>
             </div>
         </form>
     );

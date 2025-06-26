@@ -65,7 +65,7 @@ function LoginForm() {
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
             <div className="form-group">
-                <label htmlFor="Email">Id de usuário</label>
+                <label htmlFor="Email">Matrícula de usuário</label>
                 <input placeholder="Ex.: 123456" id="Email" value={id} onChange={event => setId(event.target.value)} />
             </div>
             <div className="form-group">
